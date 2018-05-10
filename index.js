@@ -25,6 +25,7 @@ function renderResult(result) {
 function displayYouTubeSearchData(data) {
   const results = data.items.map((item, index) => renderResult(item));
   $('.js-search-results').html(results);
+  $('.js-result-summary').html(`<p>Showing ${data.pageInfo.resultsPerPage} results</p>`);
 }
 
 function handleSubmit() {
